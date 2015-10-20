@@ -1,0 +1,17 @@
+{
+    "port": 3000,
+    "endpoints": [
+        {
+            "key": "notValidKey",
+            "secretKey": "notValidSecret",
+            "region": "eu-central-1",
+            "url": "http://sqs.amazonaws.com/my-user/my-queue"
+        },
+        {
+            "key": "notValidKey",
+            "secretKey": "notValidSecret",
+            "region": "eu-central-1",
+            "url": "http://sqs.amazonaws.com/my-user/my-queue-2"
+        }
+    ]
+}
