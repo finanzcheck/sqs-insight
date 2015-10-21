@@ -1,5 +1,7 @@
 {
     "port": 3000,
+    "rememberMessages": 100,
+
     "endpoints": [
         {
             "key": "notValidKey",
