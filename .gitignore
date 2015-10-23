@@ -2,3 +2,4 @@ config/config_local.json
 node_modules
 npm-debug.log
 .tmp
+.idea/
