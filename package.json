@@ -16,7 +16,7 @@
     "SQS",
     "Queue",
     "Insight",
-    "Node.JS"
+    "ElasticMQ"
   ],
   "author": "Alexander Pinnecke <alexander.pinnecke@googlemail.com>",
   "license": "MIT",
@@ -27,6 +27,7 @@
   "dependencies": {
     "angular": "^1.4.7",
     "angular-cookies": "^1.4.7",
+    "angular-socket-io": "^0.7.0",
     "angular-ui-bootstrap": "^0.14.2",
     "aws-sdk": "^2.2.10",
     "bootstrap": "^3.3.5",
