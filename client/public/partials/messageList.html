@@ -1,8 +1,5 @@
 <div class="list-group">
     <div class="list-group-item list-group-item-warning" ng-show="0 == messages.length">No Messages.</div>
-    <div class="list-group-item" ng-show="0 < messages.length" ng-controller="queueController">
-        <button ng-click="purgeQueue($parent.queueName)" class="btn btn-default">Purge Queue</button>
-    </div>
     <div class="list-group-item" ng-repeat="message in messages">
         <p>MessageId: {{ message.MessageId }}</p>
 

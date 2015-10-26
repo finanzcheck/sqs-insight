@@ -1,10 +1,13 @@
 module.exports = QueueController;
 
-QueueController.$inject = ['$scope', 'queues'];
-function QueueController ($scope, queues) {
+QueueController.$inject = ['queues'];
+function QueueController (queues) {
+    var vm = this;
 
-    $scope.purgeQueue = function (queue) {
+    vm.purgeQueue = purgeQueue;
+
+    function purgeQueue (queue) {
         console.log(queue);
-        queues.purge(queue)
+        queues.purge(queue);
     }
 }

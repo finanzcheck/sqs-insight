@@ -10,8 +10,6 @@ function QueuesService($http, $q) {
     };
 
     this.purge = function (queue) {
-        return $http.de('/queues').then(function (response) {
-            return response.data;
-        });
+        return $http.put('/queue/' + queue + '/purge');
     }
 }

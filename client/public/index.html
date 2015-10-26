@@ -11,6 +11,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="/bootstrap.css"/>
     <link rel="stylesheet" href="/json-formatter.css"/>
+    <link rel="stylesheet" href="/css/app.css"/>
 </head>
 
 <body ng-app="sqsInsight" ng-cloak>
@@ -20,6 +21,7 @@
         <div class="panel-body" ng-controller="queuesListController as list">
             <uib-tabset>
                 <uib-tab ng-repeat="queue in list.queues" heading="{{queue.name}}" select="list.select(queue.name)" active="queue.active">
+                    <button ng-controller="queueController as qc" ng-click="qc.purgeQueue(queue.name)" class="btn btn-default btn-purge-queue">Purge Queue</button>
                     <message-list queue="queue.name"></message-list>
                 </uib-tab>
             </uib-tabset>
