@@ -20,6 +20,10 @@ function MessageListDirective (queueSocket) {
                 scope.messages.push(message);
             });
 
+            queueSocket.on('purge.' + scope.queueName, function () {
+                scope.messages = [];
+            });
+
             function trim (body) {
                 return JSON.parse(body[0] === '"' ? body.slice(1, - 1) : body);
             }

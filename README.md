@@ -9,8 +9,8 @@ Otherwise, you also may install it via `npm install finanzcheck/sqs-insight`.
 ## Configure
 Copy `config/config.json` to `config/config_local.json` and change it to meet your needs. The following fields are mandatory:
 - `port` - the port to bind the GUI to
-- `rememberMessages` - How many messages should be stored? <-- This fixes the problem, that a queue consumer is not aware about messages, that were handled by other consumers
-- `endpoints` - An array of Objects defining the sqs api endpoints for the queues you want to get an insight to. Each Object needs to have the following keys defined:
+- `rememberMessages` - How many messages should be stored? <-- This fixes the problem, that a queue consumer is not aware of messages, that were handled by other consumers
+- `endpoints` - An array of Objects defining the sqs api endpoints for the queues you want to get an insight into. Each Object needs to have the following keys defined:
 
 ```json
 {

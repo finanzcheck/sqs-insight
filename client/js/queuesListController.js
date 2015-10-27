@@ -1,14 +1,14 @@
 module.exports = QueuesListController;
 
-QueuesListController.$inject = ['queuesList', '$cookies'];
-function QueuesListController (queuesList, $cookies) {
+QueuesListController.$inject = ['queues', '$cookies'];
+function QueuesListController (queues, $cookies) {
     var vm = this;
 
     vm.active = $cookies.get('selectedQueue') || null;
     vm.queues = [];
     vm.select = select;
 
-    queuesList.getQueues().then(function (queues) {
+    queues.getQueues().then(function (queues) {
         queues.forEach(function (q) {
             if (!vm.active) {
                 vm.active = q;
