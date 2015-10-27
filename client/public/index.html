@@ -21,7 +21,10 @@
         <div class="panel-body" ng-controller="queuesListController as list">
             <uib-tabset>
                 <uib-tab ng-repeat="queue in list.queues" heading="{{queue.name}}" select="list.select(queue.name)" active="queue.active">
-                    <button ng-controller="queueController as qc" ng-click="qc.purgeQueue(queue.name)" class="btn btn-default btn-purge-queue">Purge Queue</button>
+                    <div  ng-controller="queueController as qc" class="queue-actions">
+                        <button ng-click="qc.purgeQueue(queue.name)" class="btn btn-default btn-purge-queue">Purge Queue</button>
+                        <button ng-click="qc.clearQueueMessages(queue.name)" class="btn btn-default btn-clear-messages">Clear Messages</button>
+                    </div>
                     <message-list queue="queue.name"></message-list>
                 </uib-tab>
             </uib-tabset>

@@ -12,4 +12,8 @@ function QueuesService($http, $q) {
     this.purge = function (queue) {
         return $http.put('/queue/' + queue + '/purge');
     }
+
+    this.clearMessages = function (queue) {
+        return $http.put('/queue/' + queue + '/clear');
+    }
 }
