@@ -1,4 +1,4 @@
-config/config_local.json
+config/config_*.json
 node_modules
 npm-debug.log
 .tmp
