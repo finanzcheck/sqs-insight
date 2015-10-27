@@ -6,6 +6,7 @@ function QueueController (queues) {
 
     vm.purgeQueue = purgeQueue;
     vm.clearQueueMessages = clearQueueMessages;
+    vm.clearMessages = clearMessages;
 
     function purgeQueue (queue) {
         console.log(queue);
@@ -15,5 +16,10 @@ function QueueController (queues) {
     function clearQueueMessages (queue) {
         console.log(queue);
         queues.clearMessages(queue);
+    }
+
+    function clearMessages () {
+        console.log(queue);
+        queues.clearAllMessages();
     }
 }
