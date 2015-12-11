@@ -19,7 +19,6 @@ function QueueController (queues) {
     }
 
     function clearMessages () {
-        console.log(queue);
         queues.clearAllMessages();
     }
 }
